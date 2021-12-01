@@ -1,4 +1,4 @@
-function miniMaxSum(arr) {
+export function miniMaxSum(arr) {
     let minSum = 0;
     let maxSum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -9,4 +9,3 @@ function miniMaxSum(arr) {
     return [minSum - (Math.max(...arr)), maxSum - (Math.min(...arr))];
 }
 
-console.log(miniMaxSum([1, 2, 3, 4, 5]));

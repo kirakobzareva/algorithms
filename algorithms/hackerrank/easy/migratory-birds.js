@@ -6,7 +6,8 @@
 
 function migratoryBirds(arr) {
 let birds = {};
-let maxOccur = 0;
+let id = 0;
+
     for (let num of arr) {
         if (birds[num]){
             birds[num]= birds[num] + 1;
@@ -15,15 +16,16 @@ let maxOccur = 0;
         }
     }
 
-    for (let i = 0; i < birds.length; i++) {
-        maxOccur = birds[num];
+    for (const bird in birds) {
+        if (birds[bird] > id){
+            id = bird;
+        }
+       // console.log(`${bird}: ${birds[bird]}`);
     }
-
     
-    
-    
-return birds;
+return id;
 }
 
+//migratoryBirds([1,1,2,2,3]);
 
 console.log(migratoryBirds([1,1,2,2,3]));

@@ -14,3 +14,5 @@ var finalValueAfterOperations = function (operations) {
 };
 
 console.log(finalValueAfterOperations(["--X", "X++", "X++"]));
+console.log(finalValueAfterOperations(["++X", "X--"]));
+console.log(finalValueAfterOperations(["++X", "X--", "X--"]));
